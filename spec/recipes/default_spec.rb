@@ -7,6 +7,10 @@ describe 'awscli::default' do
     expect(chef_run).to include_recipe('python')
   end
 
+  it 'should include the apt recipe' do
+    expect(chef_run).to include_recipe('apt')
+  end
+
   it 'should install the awscli package' do
     expect(chef_run).to install_python_pip('awscli')
   end

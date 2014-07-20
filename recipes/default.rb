@@ -6,11 +6,6 @@
 #
 # All rights reserved - FreeBSD license, blah blah
 #
-
-# make sure python and pip are installed
-include_recipe "python"
-
-#add the awscli
-python_pip "awscli"
-
-
+include_recipe 'apt'
+include_recipe 'python'
+python_pip 'awscli'
